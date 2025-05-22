@@ -34,11 +34,15 @@ This is a microservices-based system built using Spring Boot and Spring Cloud co
 - Handles service discovery and registration.
 - Port: `8761`
 
-### 5. **API Gateway**
+### 5. 🌐 API Gateway
+- Entry point for all client requests.
 - Routes requests to appropriate microservices.
+- Secures endpoints with **Spring Security + JWT**.
 - Port: `8083`
-- Example route: `/api/employees` → Employee Service
-- Example route: `/api/departments` → Department Service
+- Example routes:
+  - `/employee/**` → Employee Service
+  - `/department/**` → Department Service
+  - `/auth/**` → Auth Service
 
 ---
 
