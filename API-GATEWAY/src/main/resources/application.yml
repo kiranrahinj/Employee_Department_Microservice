@@ -12,6 +12,7 @@ spring:
     name: API-GATEWAY
   config:
     import: optional:configserver:http://localhost:8082
+
   cloud:
     gateway:
       mvc:
@@ -20,8 +21,17 @@ spring:
             uri: lb://EMPLOYEE-SERVICE
             predicates:
               - path=/employee/**
+            filters:
+              - AuthenticationFilter
 
           - id: DEPARTMENT-SERVICE
             uri: lb://DEPARTMENT-SERVICE
             predicates:
               - path=/department/**
+            filters:
+              - AuthenticationFilter
+              -
+          - id: AUTH-SERVICE
+            uri: lb://AUTH-SERVICE
+            predicates:
+              - path=/Auth/**

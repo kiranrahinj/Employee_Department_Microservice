@@ -1,5 +1,5 @@
 server:
-  port: 8084
+  port: 8085
 
 
 spring:
@@ -23,4 +23,5 @@ spring:
 
   application:
     name: AUTH-SERVICE
+
 
