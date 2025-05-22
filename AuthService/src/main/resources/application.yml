@@ -1,0 +1,26 @@
+server:
+  port: 8084
+
+
+spring:
+  config:
+    import: optional:configserver:http://localhost:8082
+
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:mem:testdb2
+    username: sa
+    password: sa
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  application:
+    name: AUTH-SERVICE
+
