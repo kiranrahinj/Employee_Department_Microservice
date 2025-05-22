@@ -15,23 +15,22 @@ spring:
 
   cloud:
     gateway:
-      mvc:
         routes:
           - id: EMPLOYEE-SERVICE
             uri: lb://EMPLOYEE-SERVICE
             predicates:
-              - path=/employee/**
+              - Path=/employee/**
             filters:
               - AuthenticationFilter
 
           - id: DEPARTMENT-SERVICE
             uri: lb://DEPARTMENT-SERVICE
             predicates:
-              - path=/department/**
+              - Path=/department/**
             filters:
               - AuthenticationFilter
-              -
+
           - id: AUTH-SERVICE
             uri: lb://AUTH-SERVICE
             predicates:
-              - path=/Auth/**
+              - Path=/Auth/**

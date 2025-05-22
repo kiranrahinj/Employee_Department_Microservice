@@ -2,7 +2,6 @@ package com.org.API_GATEWAY.filter;
 
 import com.org.API_GATEWAY.Util.JwtUtil;
 import jakarta.ws.rs.core.HttpHeaders;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.stereotype.Component;
